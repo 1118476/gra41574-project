@@ -175,7 +175,6 @@ importances = pd.read_csv(
     skiprows=1
 )
 top_features = importances.sort_values(by="importance", ascending=False).head(10)
-print(top_features)
 
 plt.figure(figsize=(4, 3))
 plt.barh(top_features.index, top_features['importance'], color='skyblue')
@@ -199,7 +198,7 @@ importances = pd.read_csv(
     names=["feature", "importance"]
 )
 top_features = importances.sort_values(by="importance", ascending=False).head(10)
-print(top_features)
+
 
 plt.figure(figsize=(4, 3))
 plt.barh(top_features.index, top_features['importance'], color='skyblue')
